@@ -9,3 +9,7 @@
 *   **Find and delete** tasks for a **specific date**.
 *   **Set reminders** with optional repetition.
 *   Automatically **extend overdue tasks** by one day and **notify** the user.
+
+## Try the Bot
+
+You can try the Task Manager bot on Telegram: [t.me/vanyalenaBot](https://t.me/vanyalenaBot)
