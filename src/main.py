@@ -43,11 +43,11 @@ async def consumer_reminders(redis: redis.Redis, notificator):  # No need for ai
             _, message_data_bytes = result
             message_data_str = message_data_bytes.decode('utf-8')
             try:
-                print(message_data)
                 message_data = json.loads(message_data_str)
-                user_id = message_data["user_id"]
-                title = message_data["title"]
-                deadline = message_data["deadline"]
+                print("in reminder got: ", message_data)
+                user_id = message_data.get("user_id")
+                title = message_data.get("title")
+                deadline = message_data.get("deadline")
                 await notificator.send_message(user_id, f"Remind you about your deadline on task {html.bold(title)},\nPlease notice: your deadline is on {html.bold(deadline)}")
             except json.JSONDecodeError:
                 print(f"Consumer: Could not decode JSON: {message_data_str}")

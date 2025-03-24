@@ -43,6 +43,7 @@ class Notification:
         return {
             "next": self.next.isoformat(), 
             "period_sec": self.period.total_seconds(), 
+            'deadline': related_task.deadline.isoformat(),
             "times_left": self.times_left,
             "user_id": related_task.user_id,
             "title": related_task.title,
@@ -73,7 +74,7 @@ class Notification:
         if(current_time > self.next):
             self.times_left -= 1
 
-            if self.times_left <= 0:
+            if self.times_left < 0:
                 self.delete()
                 return False
                         
