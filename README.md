@@ -10,6 +10,18 @@
 *   **Set reminders** with optional repetition.
 *   Automatically **extend overdue tasks** by one day and **notify** the user.
 
+## Prerequisites
+* python 3.13
+* docker
+* git
+
+## Getting Started (will be soon)
+```
+git clone https://github.com/egsesekina/taskManager.git
+docker compose up
+pip install -r ./src/requirements.txt
+python ./src/main.py
+```
 ## Try the Bot
 
 You can try the Task Manager bot on Telegram: [t.me/vanyalenaBot](https://t.me/vanyalenaBot)
