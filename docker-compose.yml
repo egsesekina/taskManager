@@ -2,7 +2,6 @@
 services:
   mongo:
     image: mongo
-    container_name: mongo
     environment:
       MONGO_INITDB_ROOT_USERNAME: mongoadmin
       MONGO_INITDB_ROOT_PASSWORD: mongoadmin
@@ -24,7 +23,6 @@ services:
   redis:
     image: redis:latest
     restart: always
-    container_name: redis
     ports:
       - "27020:6379"
     healthcheck:
