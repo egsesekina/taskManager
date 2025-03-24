@@ -19,8 +19,9 @@
 ```
 git clone https://github.com/egsesekina/taskManager.git
 docker compose up
-pip install -r ./src/requirements.txt
-python ./src/main.py
+cd src
+pip install -r ./requirements.txt
+python ./main.py
 ```
 ## Try the Bot
 
