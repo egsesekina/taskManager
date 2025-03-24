@@ -15,7 +15,7 @@
 * docker
 * git
 
-## Getting Started (will be soon)
+## Getting Started
 ```
 git clone https://github.com/egsesekina/taskManager.git
 docker compose up
